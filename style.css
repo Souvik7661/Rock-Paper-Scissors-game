@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+
+*
+{
+    margin:0;
+    padding:0;
+    text-align: center;
+}
+h1
+{
+    background-color: #081b31;
+    color: #fff;
+    height:3.5rem;
+    text-align: center;
+    line-height: 3.5rem;
+}
+.Choice
+{
+    height:165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Choice:hover
+{
+    opacity: 0.6;
+    cursor: pointer;
+    background-color:darkblue;
+    
+}
+img
+{
+    height:150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.Choices
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.score-board
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+    color: #fff;
+}
+
+#user-score, #comp-score
+{
+    font-size: 6rem;
+}
+
+#msg
+{
+    background-color:darkgray;
+    color:black;
+    height: 5rem;
+    font-size: 3rem;
+    margin-top: 5rem;
+    display:inline;
+    padding: 1rem;
+    border-radius: 14rem;
+}
+.msg-container
+{
+    margin-top:5rem ;
+}
+.VS
+{
+    font-size: 3rem;
+}
+
+.Choice:active
+{
+    transform:scale(1.1);
+    transition: transform 0.1s;
+}
+
+#reset-btn
+{
+    margin-top: 5rem;
+    height: 5rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 15rem;
+    background-color: red;
+    color: azure;
+    font-size: 2rem;
+}
+
+#reset-btn:hover
+{
+    background-color: #0d2a4a;
+    opacity: 0.5;
+    cursor: pointer;
+}
