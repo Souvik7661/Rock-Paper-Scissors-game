@@ -1,42 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors Game</title>
-    <link rel="stylesheet" href="style.css" />
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
+  <div id="theme-toggle">
+  <button id="toggle-btn">🌙 Dark Mode</button>
+</div>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+
+  <div id="welcome-screen">
+  <h1>Welcome,Player!</h1>
+  <p class="game-title">🪨 ROCK • 📄 PAPER • ✂️ SCISSORS</p>
+  <input type="text" id="name-input" placeholder=" ENTER YOUR NAME ..." id="username" />
+  <button id="startBtn">Let’s Play!</button>
+</div>
+  <div id="game-screen" class="hidden">
+    <h1>Welcome, <span id="user-name">You</span></h1>
+
     <div class="Choices">
-        <div class="Choice" id="Rock">
-            <img src=".\images\paper.png" />
-        </div>
-        <div class="Choice" id="Paper">
-            <img src=".\images\rock.png" />
-        </div>
-        <div class="Choice" id="Scissors">
-            <img src=".\images\scissors.png" />
-        </div>
-        </div>
+      <div class="Choice" id="rock"><img src="images/rock.png"></div>
+      <div class="Choice" id="paper"><img src="images/paper.png"></div>
+      <div class="Choice" id="scissors"><img src="images/scissors.png"></div>
+    </div>
 
     <div class="score-board">
-        <div class="score">
-            <p id="user-score">0</p>
-            <p id="user-name">You</p>
-        </div>
-        <div class="VS">V.S</div>
-        <div class="score">
-            <p id="comp-score">0</p>
-            <p>Comp</p>
-        </div>
+      <div id="user-score">0</div>
+      <div class="VS">VS</div>
+      <div id="comp-score">0</div>
     </div>
 
     <div class="msg-container">
-        <p id="msg">Play Your Move :) </p>
+      <p id="msg">Make your move!</p>
     </div>
-    <button id="reset-btn">Reset Your Score</button>
-    <script src="app.js"></script>
+
+    <button id="reset-btn">Reset</button>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <div id="particles-js"></div>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+    number: {
+      value: 50,
+      density: { enable: true, value_area: 800 }
+    },
+    color: {
+      value: ["#00ffe7", "#ff00c8"]
+    },
+    shape: {
+      type: ["triangle", "star", "polygon"],
+      stroke: {
+        width: 0,
+        color: "#000000"
+      },
+      polygon: {
+        nb_sides: 5
+      }
+    },
+    opacity: {
+      value: 0.6,
+      random: true
+    },
+    size: {
+      value: 4,
+      random: true
+    },
+    line_linked: {
+      enable: true,
+      distance: 150,
+      color: "#ffffff",
+      opacity: 0.2,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: {
+      onhover: { enable: true, mode: "grab" },
+      onclick: { enable: true, mode: "push" }
+    },
+    modes: {
+      grab: { distance: 140, line_linked: { opacity: 0.5 } },
+      push: { particles_nb: 4 }
+    }
+  },
+  retina_detect: true
+});
+  </script>
+
+  <script src="app.js"></script>
 </body>
 </html>
